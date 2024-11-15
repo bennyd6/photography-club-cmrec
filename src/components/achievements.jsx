@@ -23,7 +23,6 @@ export default function Achievements() {
             <div className="achievements-heading">
                 <h1>Our Achievements</h1>
             </div>
-
             <div className="carousal-container">
                 <Carousal 
                     images={carouselData1.images} 

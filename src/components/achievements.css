@@ -1,8 +1,19 @@
 .achievements-main{
     width: 100vw;
-    min-height: 90vh;
+    min-height: 190vh;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.achievements-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .carousal-container{
