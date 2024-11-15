@@ -1,0 +1,15 @@
+.achievements-main{
+    width: 100vw;
+    min-height: 90vh;
+}
+
+
+
+.carousal-container{
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}

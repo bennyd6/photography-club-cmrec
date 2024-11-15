@@ -1,0 +1,127 @@
+.home-main {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Make sure the pseudo-element is positioned relative to this */
+}
+
+.home-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Colored Patterns.svg');
+    filter: blur(3px);
+    background-size: auto;
+    background-repeat: repeat;
+    z-index: -1; /* Place the background behind the content */
+}
+
+
+.home-2{
+    width:30%;
+    height: 100%;
+    /* background-color: rgb(66, 8, 8); */
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    /* transform: rotate(-28deg); */
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.side-1,.side-3{
+    width: 6%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.square{
+    height: 10px;
+    width: 10px;
+    background-color: white;
+}
+
+.side-2{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.home-2-1{
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.home-2-2{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+    height: 40%;
+    background-color: white;
+    border-radius: 30px;
+}
+.home-2-3{
+    width: 100%;
+    padding: 5px;
+    height: 25%;
+    background-color: white;
+    border-top-left-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-top-right-radius: 30px;
+}
+
+.home-2-3 button{
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 1000;
+}
+
+.home-2-1, .home-2-2, .home-2-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(239, 227, 227, 0.5);
+}
+
+.home-3{
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-image: url('../assets//Colored Patterns.svg'); */
+    justify-content: flex-end;
+}
+
+.home-3 img{
+    width: 1000px;
+}
+
