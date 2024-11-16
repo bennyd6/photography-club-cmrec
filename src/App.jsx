@@ -1,8 +1,6 @@
 import './App.css'
 import Header from './components/header'
 import Home from './components/home'
-import Body from './components/body'
-import Achievements from './components/achievements'
 
 
 function App() {
@@ -11,7 +9,6 @@ function App() {
     <>
     <Header></Header>
     <Home></Home>
-    <Achievements></Achievements>
     </>
   )
 }

@@ -29,7 +29,7 @@ export default function Achievements() {
         paragraph: "Natus, perferendis ipsum qui consequatur. Vero, aliquam pariatur. Distinctio sit rem mollitia dolores. Tempore corporis ullam exercitationem perferendis!"
     }
     return (
-        <div className="achievements-main">
+        <div className="achievements-main" id='achievements'>
             <div className="achievements-heading">
                 <h1>Our Achievements</h1>
             </div>

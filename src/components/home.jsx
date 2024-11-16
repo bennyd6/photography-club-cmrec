@@ -1,6 +1,7 @@
 import './home.css';
 import aw from '../assets/award.jpg';
 import p from '../assets/p-logo.png';
+import Achievements from './achievements';
 
 export default function Home() {
   const renderSquares = (count) => {
@@ -10,6 +11,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div className="home-main">
       <div className="home-2">
         <div className="side-1">
@@ -37,5 +39,7 @@ export default function Home() {
         <img src={p} alt="Logo" />
       </div>
     </div>
+    <Achievements></Achievements>
+    </>
   );
 }
