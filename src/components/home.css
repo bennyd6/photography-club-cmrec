@@ -1,4 +1,3 @@
-/* Existing Styles for .home-main and Layout */
 .home-main {
     width: 100vw;
     height: 90vh;
@@ -7,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: relative; /* Ensure pseudo-element is relative to this */
+    position: relative;
 }
 
 .home-main::before {
@@ -42,7 +41,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    transition: all 0.5s ease-in-out; /* Transition for hiding */
+    transition: all 0.5s ease-in-out;
 }
 
 .square {
@@ -67,36 +66,29 @@
     justify-content: center;
     color: white;
     background-color: rgba(239, 227, 227, 0.5);
-    transition: all 0.5s ease-in-out; /* Transition for expanding */
+    transition: all 0.5s ease-in-out;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 }
 
-/* Individual Section Styling */
 .home-2-1 {
     width: 100%;
     height: 25%;
-    background-color: white;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    padding: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .home-2-2 {
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 5px;
     height: 40%;
-    background-color: white;
     border-radius: 30px;
 }
 
 .home-2-3 {
     width: 100%;
-    padding: 5px;
     height: 25%;
-    background-color: white;
     border-top-left-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-top-right-radius: 30px;
 }
 
@@ -104,13 +96,11 @@
     width: 150px;
     height: 40px;
     border-radius: 25px;
-    background-color: white;
     font-size: 15px;
     cursor: pointer;
     font-weight: 1000;
 }
 
-/* Home 3 Section */
 .home-3 {
     width: 50%;
     height: 100%;
@@ -124,47 +114,41 @@
     width: 1000px;
 }
 
-/* Hover Effects */
-.home-2-1:hover {
-    height: 50%; /* Expand 'Aim' section */
+.home-2-1:hover, .home-2-2:hover, .home-2-3:hover {
+    height: 50%;
+    z-index: 1;
 }
 
-.home-2-2:hover {
-    height: 60%; /* Expand 'About' section */
-}
-
-.home-2-3:hover {
-    height: 50%; /* Expand 'Join' section */
-}
-
-/* Move the side sections off-screen when hovering over any middle section */
-.home-2-1:hover ~ .side-1,
-.home-2-2:hover ~ .side-1,
-.home-2-3:hover ~ .side-1 {
-    transform: translateX(-100%); /* Move .side-1 to the left */
-    opacity: 0; /* Hide .side-1 */
-}
-
-.home-2-1:hover ~ .side-3,
-.home-2-2:hover ~ .side-3,
-.home-2-3:hover ~ .side-3 {
-    transform: translateX(100%); /* Move .side-3 to the right */
-    opacity: 0; /* Hide .side-3 */
-}
-
-/* Move the non-hovered sections out of view */
 .home-2-1:hover ~ .home-2-2,
 .home-2-1:hover ~ .home-2-3,
 .home-2-2:hover ~ .home-2-1,
 .home-2-2:hover ~ .home-2-3,
 .home-2-3:hover ~ .home-2-1,
 .home-2-3:hover ~ .home-2-2 {
-    opacity: 0; /* Make the non-hovered sections invisible */
+    opacity: 0;
+    visibility: hidden;
 }
 
-/* Ensure hovered section stays in front */
-.home-2-1:hover,
-.home-2-2:hover,
-.home-2-3:hover {
-    z-index: 1; /* Bring the hovered section to the front */
+.reveal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.home-2-1:hover .reveal,
+.home-2-2:hover .reveal,
+.home-2-3:hover .reveal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.home-2-1 > h1, .home-2-2 > h1, .home-2-3 > h1 {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.home-2-1:not(:hover) > h1,
+.home-2-2:not(:hover) > h1,
+.home-2-3:not(:hover) > h1 {
+    transform: translateY(50%);
 }
