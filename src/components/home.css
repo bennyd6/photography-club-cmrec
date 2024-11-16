@@ -1,3 +1,4 @@
+/* Existing Styles for .home-main and Layout */
 .home-main {
     width: 100vw;
     height: 90vh;
@@ -6,7 +7,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: relative; /* Make sure the pseudo-element is positioned relative to this */
+    position: relative; /* Ensure pseudo-element is relative to this */
 }
 
 .home-main::before {
@@ -20,51 +21,57 @@
     filter: blur(3px);
     background-size: auto;
     background-repeat: repeat;
-    z-index: -1; /* Place the background behind the content */
+    z-index: -1;
 }
 
-
-.home-2{
-    width:30%;
+.home-2 {
+    width: 30%;
     height: 100%;
-    /* background-color: rgb(66, 8, 8); */
     background-color: black;
     display: flex;
     flex-direction: row;
-    /* transform: rotate(-28deg); */
     align-items: center;
     justify-content: space-around;
 }
 
-
-.side-1,.side-3{
+.side-1, .side-3 {
     width: 6%;
     height: 100%;
-    /* background-color: brown; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    transition: all 0.5s ease-in-out; /* Transition for hiding */
 }
 
-.square{
+.square {
     height: 10px;
     width: 10px;
     background-color: white;
 }
 
-.side-2{
+.side-2 {
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
 }
 
-.home-2-1{
+.home-2-1, .home-2-2, .home-2-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(239, 227, 227, 0.5);
+    transition: all 0.5s ease-in-out; /* Transition for expanding */
+}
+
+/* Individual Section Styling */
+.home-2-1 {
     width: 100%;
     height: 25%;
     background-color: white;
@@ -73,7 +80,8 @@
     padding: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.home-2-2{
+
+.home-2-2 {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 5px;
@@ -81,7 +89,8 @@
     background-color: white;
     border-radius: 30px;
 }
-.home-2-3{
+
+.home-2-3 {
     width: 100%;
     padding: 5px;
     height: 25%;
@@ -91,7 +100,7 @@
     border-top-right-radius: 30px;
 }
 
-.home-2-3 button{
+.home-2-3 button {
     width: 150px;
     height: 40px;
     border-radius: 25px;
@@ -101,27 +110,61 @@
     font-weight: 1000;
 }
 
-.home-2-1, .home-2-2, .home-2-3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgba(239, 227, 227, 0.5);
-}
-
-.home-3{
+/* Home 3 Section */
+.home-3 {
     width: 50%;
     height: 100%;
-    /* background-color: green; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* background-image: url('../assets//Colored Patterns.svg'); */
     justify-content: flex-end;
 }
 
-.home-3 img{
+.home-3 img {
     width: 1000px;
 }
 
+/* Hover Effects */
+.home-2-1:hover {
+    height: 50%; /* Expand 'Aim' section */
+}
+
+.home-2-2:hover {
+    height: 60%; /* Expand 'About' section */
+}
+
+.home-2-3:hover {
+    height: 50%; /* Expand 'Join' section */
+}
+
+/* Move the side sections off-screen when hovering over any middle section */
+.home-2-1:hover ~ .side-1,
+.home-2-2:hover ~ .side-1,
+.home-2-3:hover ~ .side-1 {
+    transform: translateX(-100%); /* Move .side-1 to the left */
+    opacity: 0; /* Hide .side-1 */
+}
+
+.home-2-1:hover ~ .side-3,
+.home-2-2:hover ~ .side-3,
+.home-2-3:hover ~ .side-3 {
+    transform: translateX(100%); /* Move .side-3 to the right */
+    opacity: 0; /* Hide .side-3 */
+}
+
+/* Move the non-hovered sections out of view */
+.home-2-1:hover ~ .home-2-2,
+.home-2-1:hover ~ .home-2-3,
+.home-2-2:hover ~ .home-2-1,
+.home-2-2:hover ~ .home-2-3,
+.home-2-3:hover ~ .home-2-1,
+.home-2-3:hover ~ .home-2-2 {
+    opacity: 0; /* Make the non-hovered sections invisible */
+}
+
+/* Ensure hovered section stays in front */
+.home-2-1:hover,
+.home-2-2:hover,
+.home-2-3:hover {
+    z-index: 1; /* Bring the hovered section to the front */
+}
