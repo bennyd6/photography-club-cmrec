@@ -1,7 +1,7 @@
 export default function Team(){
     return(
         <>
-        hi
+        <div>hi</div>
         </>
     )
 }
