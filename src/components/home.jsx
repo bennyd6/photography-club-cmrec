@@ -1,6 +1,7 @@
 import './home.css';
 import p from '../assets/p-logo.png';
 import Achievements from './achievements';
+import {Link} from 'react-router-dom'
 
 export default function Home() {
   const renderSquares = (count) => {
@@ -27,7 +28,7 @@ export default function Home() {
           </div>
           <div className="home-2-3">
             <h1>Wanna Join us?</h1>
-            <button className='reveal'>JOIN</button>
+            <Link to='/contact'><button className='reveal'>JOIN</button></Link>
           </div>
         </div>
         <div className="side-3">

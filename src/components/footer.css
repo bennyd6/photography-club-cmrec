@@ -1,6 +1,6 @@
 .footer{
     width: 100vw;
-    height: 15vh;
+    height: 18vh;
     background-color: black;
     color: white;
     display: flex;
@@ -17,4 +17,18 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+    border-bottom: 2px solid white;
+}
+.footer-two{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-two a{
+    color: white;
+    text-decoration: none;
 }

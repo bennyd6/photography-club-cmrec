@@ -12,9 +12,9 @@ export default function Footer(){
                 <FaXTwitter></FaXTwitter>
                 <FaLinkedinIn></FaLinkedinIn>
             </div>
-            <div className="footer-two">
-                
-            </div>
+            {/* <div className="footer-two">
+                <p>Developed by <a href="www.linkedin.com/in/benny-bandarupalli">Benny</a></p>
+            </div> */}
         </div>
         </>
     )

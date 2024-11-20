@@ -6,6 +6,18 @@ export default function Contact(){
     }
     return(
         <>
+        <section>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
         <div className="contact-main">
             <h1>Ping us here!</h1>
             <form onSubmit={onSubmit}>
